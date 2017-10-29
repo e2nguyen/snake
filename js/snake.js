@@ -331,7 +331,7 @@ function drawGrid() {
 }
 
 var counter = 0;
-var framesToSkip = 10;
+var framesToSkip = 7;
 var truth = true;
 /* Main loop that updates position of snake and redraws board elements. */
 function loop() {
