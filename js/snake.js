@@ -124,6 +124,7 @@ function drawFood() {
   ctx.fillRect(food.x, food.y, side, side);
 }
 
+
 /* Checks if food generates in snake */
 function inSnake(InSnake) {
   // goes through snake body and checks for matching coordinates
