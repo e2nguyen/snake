@@ -128,27 +128,37 @@ function drawFood() {
 /* Generates new food with coordinates */
 function createFood() {
   var inValid = true;
-  
+
   // validates food coordinates
   while( inValid ) {
+    var inSnake = false;  
+    
     // get new coordinates 
     var food_x = Math.floor(Math.random() * 25) * 25; 
     var food_y = Math.floor(Math.random() * 25) * 25; 
    
     if (inWall(food_x, food_y)) {
       continue; // if in wall, loop through again
-    } else {
+    } 
+    else {
       // if not in Wall, check if in snake 
       for(var i = 0; i < snake.body.length; i++) {
         if (food_x == snake.body[i].x && food_y == snake.body[i].y) {
-          continue; // in snake, regenerate
+          inSnake = true;
+          break;
         } 
       } 
-    } 
-
+    }
+    
+    // in snake, regenerate
+    if (inSnake) {
+      continue;
+    }
+      
     // at this point in loop Food coordinates are valid
     inValid = false;
   }
+
   return new Coordinate(food_x, food_y);
 } 
 
