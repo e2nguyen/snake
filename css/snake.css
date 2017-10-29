@@ -1,47 +1,3 @@
-
-/* '*' means all elemenets, kind of like a wildcard 
-
-    * {
-  
-    }
-
-
-  '#' is for id tags from html, so if you had <img id="cat" src="link here">
-    you could style the image using
-
-    
-      #cat {
-        background: rgb(0,0,0);
-       // r is red, g is green, b is blue
-       // could also use hex for colors, or rgba where a is opacity, but not important  
-      }
-
-  if you see 'class="title" in html, to style the class, inside the css file you would do 
-
-    .title {
-
-    }
-*/
-/*
-  the difference between classes and ids is that ids are specific whereas classes pertain to maybe more than
-  just the line you're working on, multiple images can be style a certain way with the class and the id can be used if
-  a specific image needs to be styled a bit differently, but you can include both in a given html tag like <div> etc
-
-  to style tags like body, html, li (list item), ul (unordered list), a (anchor tags, links you somewhere)
-  just do this
-
-  body {
-
-  }
-
-  multiple stylings that are the same are sep. by comma
-
-  body, html, a {
-
-  } 
-
-*/
-
   body, html {
     padding: 0;
     margin: 0;
@@ -49,9 +5,8 @@
 
   canvas {
     display: block;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.93);
+    height: 48%;
+    background: rgba(0,0,0,0.91);
   }
 
 
