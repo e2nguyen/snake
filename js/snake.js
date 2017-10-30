@@ -126,16 +126,16 @@ function drawFood() {
 
 
 /* Checks if food generates in snake */
-function inSnake(InSnake, food_x, food_y) {
+function inSnake(insideSnake, x, y) {
   // goes through snake body and checks for matching coordinates
   for(var i = 0; i < snake.body.length; i++) {
-    if (food_x == snake.body[i].x && food_y == snake.body[i].y) {
-      InSnake = true;
+    if (x == snake.body[i].x && y == snake.body[i].y) {
+      insideSnake = true;
       break;
     } 
   }
 
-  return inSnake; 
+  return insideSnake; 
 }
 
 
@@ -145,7 +145,7 @@ function createFood() {
 
   // validates food coordinates
   while( inValid ) {
-    var InSnake = false;  
+    var insideSnake = false;  
     
     // get new coordinates 
     var food_x = Math.floor(Math.random() * 25) * 25; 
@@ -155,7 +155,7 @@ function createFood() {
     if (inWall(food_x, food_y)) {
       continue; // if in wall, loop through again
     } 
-    if (inSnake(InSnake, food_x, food_y)) {
+    if (inSnake(insideSnake, food_x, food_y)) {
       continue;
     }
       
