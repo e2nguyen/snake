@@ -4,6 +4,7 @@
   }
 
   canvas {
+    margin: 0 auto;
     display: block;
     height: 48%;
     background: rgba(0,0,0,0.91);
