@@ -130,7 +130,7 @@ function inSnake(InSnake, food_x, food_y) {
   // goes through snake body and checks for matching coordinates
   for(var i = 0; i < snake.body.length; i++) {
     if (food_x == snake.body[i].x && food_y == snake.body[i].y) {
-      inSnake = true;
+      InSnake = true;
       break;
     } 
   }
